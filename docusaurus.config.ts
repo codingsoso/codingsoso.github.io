@@ -2,10 +2,12 @@ import {themes as prismThemes} from 'prism-react-renderer';
 import type {Config} from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
 
+import type {Options as DocsOptions} from '@docusaurus/plugin-content-docs';
+
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
 const config: Config = {
-  title: 'Coding soso',
+  title: 'Coding',
   tagline: 'Enjoy life, Code more',
   favicon: 'img/favicon.ico',
 
@@ -36,6 +38,49 @@ const config: Config = {
     locales: ['en'],
   },
 
+  noIndex: false,
+  markdown: {
+    mermaid: true,
+  },
+  themes: ['@docusaurus/theme-mermaid',
+    		[
+			require.resolve('@easyops-cn/docusaurus-search-local'),
+			/** @type {import("@easyops-cn/docusaurus-search-local").PluginOptions} */
+			({
+				hashed: true,
+				language: ['en', 'zh'],
+				indexPages: true,
+				indexDocs: true,
+				indexBlog: true,
+        docsDir: ['docs', 'frontend', 'backend'],
+				highlightSearchTermsOnTargetPage: true,
+			}),
+		],
+  ],
+  plugins: [
+  [
+    'content-docs',
+    {
+      id: 'frontend',
+      path: 'frontend',
+      routeBasePath: 'frontend',
+      sidebarPath: './sidebars.ts',
+      // sidebarPath: './sidebarsFrontend.ts',
+      editUrl: 'https://github.com/codingsoso/codingsoso.github.io/tree/main',
+    } satisfies DocsOptions,
+  ],
+  [
+    'content-docs',
+    {
+      id: 'backend',
+      path: 'backend',
+      routeBasePath: 'backend',
+      sidebarPath: './sidebars.ts',
+      // sidebarPath: './sidebarsBackend.ts',
+      editUrl: 'https://github.com/codingsoso/codingsoso.github.io/tree/main',
+    } satisfies DocsOptions,
+  ],
+],
   presets: [
     [
       'classic',
@@ -76,9 +121,9 @@ const config: Config = {
       respectPrefersColorScheme: true,
     },
     navbar: {
-      title: 'Documentation',
+      title: 'Coding',
       logo: {
-        alt: 'My Logo',
+        alt: 'Coding',
         src: 'img/logo.svg',
       },
       items: [
@@ -87,6 +132,22 @@ const config: Config = {
           sidebarId: 'tutorialSidebar',
           position: 'left',
           label: 'Tutorial',
+        },
+        {
+          to: '/frontend',
+          type: 'docSidebar',
+          docsPluginId: 'frontend',
+          sidebarId: 'frontendSidebar',
+          position: 'left',
+          label: 'Frontend',
+        },
+        {
+          to: '/backend',
+          type: 'docSidebar',
+          docsPluginId: 'backend',
+          sidebarId: 'backendSidebar',
+          position: 'left',
+          label: 'Backend',
         },
         {to: '/blog', label: 'Blog', position: 'left'},
         {
@@ -143,11 +204,16 @@ const config: Config = {
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} Coding soso, Inc. Built with Docusaurus.`,
+      copyright: `Copyright © ${new Date().getFullYear()} 
+        <a href="https://github.com/codingsoso" target="_blank" rel="noopener noreferrer">
+          Coding Soso
+        </a>. Built with 
+        <a href="https://docusaurus.io/" target="_blank" rel="noopener noreferrer">Docusaurus</a>.`,
     },
     prism: {
       theme: prismThemes.github,
       darkTheme: prismThemes.dracula,
+      additionalLanguages: ['json', 'bash','java'],
     },
   } satisfies Preset.ThemeConfig,
 };

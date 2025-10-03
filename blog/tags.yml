@@ -1,19 +1,34 @@
-facebook:
-  label: Facebook
-  permalink: /facebook
-  description: Facebook tag description
-
-hello:
-  label: Hello
-  permalink: /hello
-  description: Hello tag description
+test:
+  label: Test
+  permalink: /test
+  description: Test tag description
 
 docusaurus:
   label: Docusaurus
   permalink: /docusaurus
   description: Docusaurus tag description
 
-hola:
-  label: Hola
-  permalink: /hola
-  description: Hola tag description
+java:
+  label: Java
+  permalink: /java
+  description: Java tag description
+
+spring:
+  label: Spring
+  permalink: /spring
+  description: Spring tag description
+
+python:
+  label: Python
+  permalink: /python
+  description: Python tag description
+
+ai:
+  label: AI
+  permalink: /ai
+  description: AI tag description
+
+course:
+  label: Course
+  permalink: /course
+  description: Course tag description
