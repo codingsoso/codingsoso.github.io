@@ -49,10 +49,10 @@ const config: Config = {
 			({
 				hashed: true,
 				language: ['en', 'zh'],
-				indexPages: true,
+				indexPages: false,
 				indexDocs: true,
-				indexBlog: true,
-        docsDir: ['docs', 'frontend', 'backend'],
+				indexBlog: false,
+        docsDir: ['notes', 'frontend', 'backend'],
 				highlightSearchTermsOnTargetPage: true,
 			}),
 		],
@@ -87,6 +87,7 @@ const config: Config = {
       {
         docs: {
           sidebarPath: './sidebars.ts',
+          path: 'notes',
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
@@ -131,15 +132,7 @@ const config: Config = {
           type: 'docSidebar',
           sidebarId: 'tutorialSidebar',
           position: 'left',
-          label: 'Tutorial',
-        },
-        {
-          to: '/frontend',
-          type: 'docSidebar',
-          docsPluginId: 'frontend',
-          sidebarId: 'frontendSidebar',
-          position: 'left',
-          label: 'Frontend',
+          label: 'Notes',
         },
         {
           to: '/backend',
@@ -148,6 +141,14 @@ const config: Config = {
           sidebarId: 'backendSidebar',
           position: 'left',
           label: 'Backend',
+        },
+        {
+          to: '/frontend',
+          type: 'docSidebar',
+          docsPluginId: 'frontend',
+          sidebarId: 'frontendSidebar',
+          position: 'left',
+          label: 'Frontend',
         },
         {to: '/blog', label: 'Blog', position: 'left'},
         {
@@ -161,20 +162,7 @@ const config: Config = {
       style: 'dark',
       links: [
         {
-          title: 'Docs',
-          items: [
-            {
-              label: 'Tutorial',
-              to: '/docs/intro',
-            },
-            {
-              label: 'Blog',
-              to: '/blog',
-            },
-          ],
-        },
-         {
-          title: 'Useful Links',
+          title: 'News',
           items: [
             {
               label: 'Gitee',
@@ -184,6 +172,11 @@ const config: Config = {
               label: 'OSChina',
               href: 'https://www.oschina.net/',
             },
+          ],
+        },
+         {
+          title: 'Useful Links',
+          items: [
             {
               label: 'Spring',
               href: 'https://spring.io/',
@@ -196,10 +189,6 @@ const config: Config = {
             {
               label: 'Docusaurus',
               href: 'https://docusaurus.io/',
-            },
-            {
-              label: 'GitHub',
-              href: 'https://github.com/yongshengy',
             },
           ],
         },
