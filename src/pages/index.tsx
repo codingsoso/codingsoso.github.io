@@ -14,7 +14,7 @@ function HomepageHeader() {
         {/* <Heading as="h1" className="hero__title">
           {siteConfig.tagline}
         </Heading> */}
-        <p className="hero__subtitle"> 🐱  {siteConfig.tagline} 🐱 </p>
+        <p className="hero__subtitle"> 🎇 {siteConfig.tagline} 👨‍🍳 </p>
         {/* <div className={styles.buttons}>
           <Link
             className="button button--secondary button--lg"
@@ -157,6 +157,17 @@ export default function Home(): ReactNode {
       description="Description will go into a meta tag in <head />">
       <HomepageHeader />
       <main>
+        <CardGrid header="🚀 教程">
+          <Card color="danger" title="🔥 谷粒商城" href="https://www.bilibili.com/video/BV1np4y1C7Yf/">
+            Java项目《谷粒商城》架构师级Java项目实战，对标阿里P6-P7，全网最强
+          </Card>
+          <Card color="danger" title="🔥 YunaiV/ruoyi-vue-pro" href="https://github.com/YunaiV/ruoyi-vue-pro">
+            RuoYi-Vue 全新 Pro 版本，优化重构所有功能。基于 Spring Boot + MyBatis Plus + Vue & Element 实现的后台管理系统 + 微信小程序，支持 RBAC 动态权限、数据权限、SaaS 多租户、Flowable 工作流、三方登录、支付、短信、商城、CRM、ERP、AI 大模型等功能
+          </Card>
+          <Card color="danger" title="🔥 zhijiantianya/yudao-cloud" href="https://gitee.com/zhijiantianya/yudao-cloud">
+            ruoyi-vue-pro 全新 Cloud 版本，优化重构所有功能。基于 Spring Cloud Alibaba + Gateway + Nacos + RocketMQ + Vue & Element 实现的后台管理系统 + 用户小程序，支持 RBAC 动态权限、多租户、数据权限、工作流、三方登录、支付、短信、商城、CRM、ERP、AI 等功能
+          </Card>
+        </CardGrid>
 
         {/* <CardGrid header="🚀 快速开始">
           <Card color="danger" title={
