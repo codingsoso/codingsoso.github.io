@@ -5,12 +5,9 @@ docusaurus:
   image_url: https://docusaurus.io/img/docusaurus.svg
   page: true
 
-# me:
-#   name: Yang
-#   title: Great Engineer
-#   url: https://codingsoso.github.io
-#   image_url: https://avatars.githubusercontent.com/u/235888778?s=200&v=4
-#   page: true
-#   socials:
-#     github: codingsoso
-
+me:
+  name: Coding
+  title: Student of Coding
+  url: https://codingsoso.github.io
+  image_url: https://avatars.githubusercontent.com/u/235888778?s=200&v=4
+  page: true
